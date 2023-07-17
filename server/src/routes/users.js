@@ -41,7 +41,7 @@ router.post('/login', async (req, res) => {
   //correct login
   const token = jwt.sign({ id: user._id }, 'secret'); //"secret" needed to verify
 
-  res.json({ token: token, userId: user._id });
+  res.json({ token: token, userID: user._id });
 });
 
 export { router as userRouter };
